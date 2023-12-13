@@ -1,37 +1,56 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header>
-			<nav>
-				<p>FulanoD3Tal</p>
-				<ul>
-					<li>Home</li>
-					<li>Work</li>
-					<li>Story</li>
-					<li>Contact Me</li>
-				</ul>
-			</nav>
-
-		</header>
-		<slot />
-	</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width,initial-scale=1' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class='max-w-screen-2xl mx-auto text-base xs:px-4 md:px-14'>
+    <header class='mt-6'>
+      <nav class='flex flex-col md:flex-row'>
+        <p class='flex-1'>FulanoD3Tal</p>
+        <ul class='flex gap-6'>
+          <li>Home</li>
+          <li>Work</li>
+          <li>Story</li>
+          <li>Contact Me</li>
+        </ul>
+      </nav>
+    </header>
+    <slot />
+  </body>
 </html>
-<style>
-	
+<style is:global>
+  @font-face {
+    font-family: 'Rubik';
+    src: url('/fonts/Rubik-Black.ttf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Medium.ttf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
 </style>
