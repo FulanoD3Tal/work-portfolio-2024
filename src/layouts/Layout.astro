@@ -3,6 +3,8 @@ interface Props {
   title: string;
 }
 
+import Header from '../components/organisms/Header.astro'
+
 const { title } = Astro.props;
 ---
 
@@ -17,17 +19,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class='max-w-screen-2xl mx-auto text-base xs:px-4 md:px-14'>
-    <header class='mt-6'>
-      <nav class='flex flex-col md:flex-row'>
-        <p class='flex-1'>FulanoD3Tal</p>
-        <ul class='flex gap-6'>
-          <li>Home</li>
-          <li>Work</li>
-          <li>Story</li>
-          <li>Contact Me</li>
-        </ul>
-      </nav>
-    </header>
+    <Header/>
     <slot />
   </body>
 </html>

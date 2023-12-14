@@ -1,0 +1,17 @@
+---
+interface Props {
+  label: string;
+  link: string;
+}
+
+const { label, link } = Astro.props;
+---
+
+<a
+  href={link}
+  aria-label={label}
+  class='flex rounded-full justify-center items-center
+  h-12 w-12 bg-black text-white hover:scale-110 transition-transform focus:scale-110 hover:drop-shadow-md'
+>
+  <slot />
+</a>
