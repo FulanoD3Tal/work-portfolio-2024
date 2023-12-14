@@ -1,4 +1,5 @@
 ---
+import CTAButton from '../components/atoms/CTAButton.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -7,16 +8,16 @@ import Layout from '../layouts/Layout.astro';
     <section class='min-h-[600px] grid items-center'>
       <div class='flex flex-col gap-4'>
         <h2 class='text-xl font-medium'>Roberto De la Garza</h2>
-        <h1 class='text-xl md:text-2xl font-rubik font-black'>FrontEnd Developer</h1>
-        <p class="max-w-[45ch]">
+        <h1 class='text-xl md:text-2xl font-rubik font-black'>
+          FrontEnd Developer
+        </h1>
+        <p class='max-w-[45ch]'>
           Web, mobile and more, my goal is bring solutions to you, let get in
           touch now
         </p>
         <div class='flex gap-8'>
-          <a
-            href='#'
-            class='flex rounded-full justify-center items-center h-12 w-12 bg-black text-white'
-            ><svg
+          <CTAButton link='/' label='LinkedIn'>
+            <svg
               width='35'
               height='35'
               viewBox='0 0 30 30'
@@ -25,14 +26,13 @@ import Layout from '../layouts/Layout.astro';
               <g>
                 <path
                   d='M23.3333 4.28571C23.9648 4.28571 24.5704 4.53656 25.0169 4.98307C25.4634 5.42959 25.7143 6.03519 25.7143 6.66666V23.3333C25.7143 23.9648 25.4634 24.5704 25.0169 25.0169C24.5704 25.4634 23.9648 25.7143 23.3333 25.7143H6.66667C6.0352 25.7143 5.4296 25.4634 4.98308 25.0169C4.53657 24.5704 4.28572 23.9648 4.28572 23.3333V6.66666C4.28572 6.03519 4.53657 5.42959 4.98308 4.98307C5.4296 4.53656 6.0352 4.28571 6.66667 4.28571H23.3333ZM22.7381 22.7381V16.4286C22.7381 15.3993 22.3292 14.4121 21.6014 13.6843C20.8736 12.9565 19.8864 12.5476 18.8571 12.5476C17.8452 12.5476 16.6667 13.1667 16.0952 14.0952V12.7738H12.7738V22.7381H16.0952V16.869C16.0952 15.9524 16.8333 15.2024 17.75 15.2024C18.192 15.2024 18.616 15.378 18.9285 15.6905C19.2411 16.0031 19.4167 16.427 19.4167 16.869V22.7381H22.7381ZM8.90476 10.9048C9.4352 10.9048 9.94391 10.694 10.319 10.319C10.6941 9.94389 10.9048 9.43519 10.9048 8.90475C10.9048 7.79761 10.0119 6.89285 8.90476 6.89285C8.37117 6.89285 7.85944 7.10482 7.48213 7.48212C7.10483 7.85943 6.89286 8.37116 6.89286 8.90475C6.89286 10.0119 7.79762 10.9048 8.90476 10.9048ZM10.5595 22.7381V12.7738H7.26191V22.7381H10.5595Z'
-                ></path>
+                >
+                </path>
               </g>
             </svg>
-          </a>
-          <a
-            href='#'
-            class='flex rounded-full justify-center items-center h-12 w-12 bg-black text-white'
-            ><svg
+          </CTAButton>
+          <CTAButton link='/' label='Github'>
+            <svg
               width='40'
               height='40'
               viewBox='0 0 40 40'
@@ -44,12 +44,10 @@ import Layout from '../layouts/Layout.astro';
                 >
                 </path>
               </g>
-            </svg></a
-          >
-          <a
-            href='#'
-            class='flex rounded-full justify-center items-center h-12 w-12 bg-black text-white'
-            ><svg
+            </svg>
+          </CTAButton>
+          <CTAButton link='/' label='Email'>
+            <svg
               width='28'
               height='28'
               viewBox='0 0 28 28'
@@ -60,8 +58,8 @@ import Layout from '../layouts/Layout.astro';
                   d='M23.3333 21H21V10.7917L14 15.1667L7 10.7917V21H4.66667V7.00001H6.06667L14 11.9583L21.9333 7.00001H23.3333M23.3333 4.66667H4.66667C3.37167 4.66667 2.33334 5.70501 2.33334 7.00001V21C2.33334 21.6188 2.57917 22.2123 3.01675 22.6499C3.45434 23.0875 4.04783 23.3333 4.66667 23.3333H23.3333C23.9522 23.3333 24.5457 23.0875 24.9833 22.6499C25.4208 22.2123 25.6667 21.6188 25.6667 21V7.00001C25.6667 6.38117 25.4208 5.78767 24.9833 5.35009C24.5457 4.9125 23.9522 4.66667 23.3333 4.66667Z'
                 ></path>
               </g>
-            </svg></a
-          >
+            </svg>
+          </CTAButton>
         </div>
       </div>
     </section>
