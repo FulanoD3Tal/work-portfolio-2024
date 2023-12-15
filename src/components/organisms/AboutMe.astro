@@ -1,0 +1,61 @@
+<section id='about-me' class='mb-40'>
+  <h2 class='font-rubik text-heading mb-20'>About me</h2>
+
+  <articule id='about-me-section' class='flex flex-col gap-4 max-w-[60ch]'>
+    <p id='about-me__joke'>Just the best, what are you waiting for ?</p>
+    <p class='real-stuff'>
+      Software engineer with <span>+7</span> years experience in real worlds
+      applications, freelance sometimes, gamer the rest of the time
+    </p>
+    <p class='real-stuff'>
+      Experience with native web tecnologies also popular web frameworks as
+      <span>React.js</span>, <span>Next.js</span>, <span>Astro</span>
+    </p>
+    <p class='real-stuff'>
+      Work with mobile native tecnologies as <span>Kotlin</span> or <span
+        >Swift</span
+      >, and also with multiplataform like <span>Flutter</span>
+    </p>
+    <p class='real-stuff'>
+      Can also provided <span>fullstack</span> solutions with production ready
+      backend
+    </p>
+    <a
+      id='about-me__cta'
+      href='/#contact-me'
+      class='mt-4 px-6 bg-black py-1.5 w-fit rounded-md
+       hover:scale-110 transition-transform focus:scale-110 hover:drop-shadow-md'
+    >
+      Let work together</a
+    >
+  </articule>
+</section>
+
+<style>
+  span {
+    @apply font-semibold;
+  }
+
+  .real-stuff {
+    opacity: 0;
+  }
+
+  a {
+    opacity: 0;
+  }
+</style>
+
+<script>
+  import { inView, stagger, spring, timeline } from 'motion';
+  inView('#about-me-section', () => {
+    timeline([
+      ['#about-me__joke', { opacity: 0.2 }, { delay: 1 }],
+      [
+        '.real-stuff',
+        { opacity: 1 },
+        { delay: stagger(0.4), easing: spring(), at: '-.2' },
+      ],
+      ['#about-me__cta', { opacity: 1 }],
+    ]);
+  });
+</script>
