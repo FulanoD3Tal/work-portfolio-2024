@@ -3,13 +3,19 @@ interface Props {}
 ---
 
 <header class='py-6 sticky top-0 dark:bg-zinc-800 z-30'>
-  <nav class='flex flex-col md:flex-row'>
+  <nav class='flex flex-col md:flex-row items-center'>
     <p class='flex-1'>FulanoD3Tal</p>
-    <ul class='flex gap-6 xs:hidden'>
-      <li>Home</li>
-      <li>Work</li>
-      <li>Story</li>
-      <li>Contact Me</li>
+    <ul class='flex gap-6 items-center text-center scale-90 md:scale-100'>
+      <li><a href='/'>Home</a></li>
+      <li><a href='/#work'>Work</a></li>
+      <li><a href='/#about-me'>About me</a></li>
+      <li>
+        <a
+          href='/#contact-me'
+          class='bg-black text-white px-5 py-1.5 rounded-md inline-block'
+          >Contact Me</a
+        >
+      </li>
     </ul>
   </nav>
 </header>
