@@ -2,16 +2,20 @@
 interface Props {
   label: string;
   link: string;
+  class?: string;
+  external?: boolean;
 }
 
-const { label, link } = Astro.props;
+const { label, link, external = false, class: extraClass = '' } = Astro.props;
 ---
 
 <a
   href={link}
   aria-label={label}
-  class='flex rounded-full justify-center items-center
-  h-12 w-12 bg-black text-white hover:scale-110 transition-transform focus:scale-110 hover:drop-shadow-md'
+  target={external ? '_blank' : '_self'}
+  rel='noopener noreferrer'
+  class=`flex rounded-full justify-center items-center
+  h-12 w-12 bg-black text-white hover:scale-110 transition-transform focus:scale-110 hover:drop-shadow-md ${extraClass}`
 >
   <slot />
 </a>

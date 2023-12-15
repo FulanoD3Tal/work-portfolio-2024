@@ -4,11 +4,13 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: "media",
 	theme: {
 		fontSize: {
 			base: '1rem',
 			xl: '2rem',
-			'2xl': '6rem'
+			heading: '3rem',
+			'2xl': '5.25rem'
 		},
 		extend: {
 			fontFamily: {
