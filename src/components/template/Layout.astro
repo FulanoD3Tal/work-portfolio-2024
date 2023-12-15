@@ -3,7 +3,7 @@ interface Props {
   title: string;
 }
 
-import Header from '../organisms/Header.astro'
+import Header from '../organisms/Header.astro';
 
 const { title } = Astro.props;
 ---
@@ -18,12 +18,21 @@ const { title } = Astro.props;
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class='max-w-screen-2xl mx-auto text-base xs:px-4 md:px-14'>
-    <Header/>
+  <body
+    class='max-w-screen-2xl mx-auto text-base px-4 md:px-14 mb-8 bg-white dark:bg-zinc-800 text-black dark:text-white'
+  >
+    <Header />
     <slot />
   </body>
 </html>
 <style is:global>
+  @font-face {
+    font-family: 'Rubik';
+    src: url('/fonts/Rubik-ExtraBold.ttf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
   @font-face {
     font-family: 'Rubik';
     src: url('/fonts/Rubik-Black.ttf') format('opentype');
