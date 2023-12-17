@@ -2,17 +2,10 @@
 import CTAButton from '@components/atoms/CTAButton.astro';
 ---
 
-<section class='min-h-[600px] grid items-center'>
-  <div class='flex flex-col gap-4'>
-    <h2 class='text-xl font-medium'>FrontEnd Developer</h2>
-    <h1 class='text-xl md:text-2xl font-rubik font-black'>
-      Roberto De la Garza
-    </h1>
-    <p class='max-w-[45ch]'>
-      Web, mobile and more, my goal is bring solutions to you, let get in touch
-      now
-    </p>
-    <div class='flex gap-8'>
+<section id='contact-me' class='mb-32'>
+  <h2 class='font-rubik text-heading mb-20'>Contactame</h2>
+  <article class='flex flex-col gap-4'>
+    <div class='flex flex-col md:flex-row md:items-center gap-4'>
       <CTAButton
         link='https://www.linkedin.com/in/roberto-alonso-de-la-garza-mendoza-3699361b2/'
         external
@@ -27,6 +20,9 @@ import CTAButton from '@components/atoms/CTAButton.astro';
           </g>
         </svg>
       </CTAButton>
+      <p>/roberto-alonso-de-la-garza-mendoza-3699361b2</p>
+    </div>
+    <div class='flex flex-col md:flex-row md:items-center gap-4'>
       <CTAButton link='https://github.com/FulanoD3tal' external label='Github'>
         <svg width='40' height='40' viewBox='0 0 40 40' class='fill-current'>
           <g>
@@ -37,6 +33,9 @@ import CTAButton from '@components/atoms/CTAButton.astro';
           </g>
         </svg>
       </CTAButton>
+      <p>/FulanoD3Tal</p>
+    </div>
+    <div class='flex flex-col md:flex-row md:items-center gap-4'>
       <CTAButton link='mailto:su.escala.es.biblica@gmail.com' label='Email'>
         <svg width='28' height='28' viewBox='0 0 28 28' class='fill-current'>
           <g>
@@ -46,6 +45,13 @@ import CTAButton from '@components/atoms/CTAButton.astro';
           </g>
         </svg>
       </CTAButton>
+      <p>su.escala.es.biblica@gmail.com</p>
     </div>
-  </div>
+  </article>
 </section>
+
+<style>
+  p {
+    @apply font-bold;
+  }
+</style>
